@@ -1,0 +1,544 @@
+/* ==============================
+   VARIABLES DE COLORES
+   ============================== */
+
+:root {
+    --color-principal: #2563eb;
+    --color-secundario: #1e40af;
+    --color-fondo: #f5f7fb;
+    --color-sidebar: #111827;
+    --color-texto: #1f2937;
+    --color-blanco: #ffffff;
+}
+
+
+/* ==============================
+   CONFIGURACIÓN GENERAL
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+
+/* ==============================
+   ESTRUCTURA PRINCIPAL - GRID
+   ============================== */
+
+.dashboard {
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 240px 1fr;
+
+    grid-template-rows: 80px 1fr 60px;
+
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main"
+        "sidebar footer";
+}
+
+
+/* ==============================
+   BARRA LATERAL
+   ============================== */
+
+.sidebar {
+    grid-area: sidebar;
+
+    background-color: var(--color-sidebar);
+
+    color: var(--color-blanco);
+
+    padding: 25px;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+
+/* MENÚ */
+
+.sidebar nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.sidebar nav a {
+    color: var(--color-blanco);
+
+    text-decoration: none;
+
+    padding: 12px;
+
+    border-radius: 8px;
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.header {
+    grid-area: header;
+
+    background-color: var(--color-blanco);
+
+    padding: 20px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+/* ==============================
+   CONTENIDO PRINCIPAL
+   ============================== */
+
+.main {
+    grid-area: main;
+
+    padding: 30px;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+.footer {
+    grid-area: footer;
+
+    background-color: var(--color-blanco);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}/* ==============================
+   ENCABEZADO DEL CONTENIDO
+   ============================== */
+
+.main-header {
+    margin-bottom: 25px;
+}
+
+.main-header h2 {
+    margin-bottom: 8px;
+}
+
+.main-header p {
+    color: #64748b;
+}
+
+
+/* ==============================
+   TARJETAS
+   ============================== */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* TARJETA INDIVIDUAL */
+
+.card {
+    background-color: var(--color-blanco);
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+/* CONTENIDO DE LA TARJETA */
+
+.card-info {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+}
+
+
+/* ICONOS */
+
+.card-icon {
+    font-size: 30px;
+}
+
+
+/* TÍTULO */
+
+.card h3 {
+    font-size: 15px;
+
+    color: #64748b;
+
+    margin-bottom: 8px;
+}
+
+
+/* VALOR */
+
+.card-value {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+/* CAMBIO */
+
+.card-change {
+    font-size: 13px;
+
+    color: #16a34a;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}/* ==============================
+   GRÁFICO Y TABLA
+   ============================== */
+
+.dashboard-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    margin-top: 25px;
+}
+
+
+/* ==============================
+   PANELES
+   ============================== */
+
+.panel {
+    background-color: var(--color-blanco);
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ENCABEZADO DEL PANEL */
+
+.panel-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.panel-header h2 {
+    font-size: 18px;
+}
+
+.panel-header span {
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+
+/* ==============================
+   GRÁFICO
+   ============================== */
+
+.chart {
+    height: 250px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-around;
+
+    gap: 15px;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    padding: 20px 10px 0;
+}
+
+.bar-container {
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex: 1;
+}
+
+.bar {
+    width: 35px;
+
+    background-color: var(--color-principal);
+
+    border-radius: 6px 6px 0 0;
+
+    transition: transform 0.3s ease;
+}
+
+.bar:hover {
+    transform: scaleY(1.08);
+}
+
+.bar-container span {
+    font-size: 12px;
+
+    color: #64748b;
+}
+
+
+/* ==============================
+   TABLA
+   ============================== */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: left;
+
+    padding: 14px 10px;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+td {
+    font-size: 14px;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f8fafc;
+}/* ==============================
+   INTERACTIVIDAD DEL MENÚ
+   ============================== */
+
+.sidebar nav a {
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.sidebar nav a:hover {
+    background-color: var(--color-principal);
+
+    transform: translateX(5px);
+}
+
+
+/* ==============================
+   ACCESIBILIDAD - FOCUS
+   ============================== */
+
+.sidebar nav a:focus {
+    outline: 3px solid #93c5fd;
+
+    outline-offset: 2px;
+}
+
+
+/* ==============================
+   INTERACTIVIDAD DEL HEADER
+   ============================== */
+
+.usuario {
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    transition: background-color 0.3s ease;
+}
+
+.usuario:hover {
+    background-color: #f1f5f9;
+}/* ==============================
+   INTERACTIVIDAD DE LA TABLA
+   ============================== */
+
+tbody tr:hover {
+    background-color: #eff6ff;
+
+    cursor: pointer;
+}/* ==============================
+   RESPONSIVE - TABLET
+   ============================== */
+
+@media (max-width: 768px) {
+
+    .dashboard {
+        grid-template-columns: 180px 1fr;
+
+        grid-template-areas:
+            "sidebar header"
+            "sidebar main"
+            "sidebar footer";
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+}/* ==============================
+   RESPONSIVE - CELULAR
+   ============================== */
+
+@media (max-width: 480px) {
+
+    .dashboard {
+        display: block;
+
+        min-height: 100vh;
+    }
+
+
+    /* BARRA LATERAL */
+
+    .sidebar {
+        display: none;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        padding: 20px;
+
+        min-height: 70px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+
+    /* CONTENIDO */
+
+    .main {
+        padding: 20px;
+    }
+
+
+    /* TARJETAS */
+
+    .cards {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    /* GRÁFICO Y TABLA */
+
+    .dashboard-content {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    /* PANELES */
+
+    .panel {
+        padding: 18px;
+    }
+
+
+    /* TABLA */
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        min-height: 60px;
+
+        padding: 15px;
+
+        text-align: center;
+    }
+
+}

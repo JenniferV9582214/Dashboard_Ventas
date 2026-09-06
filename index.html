@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard de Ventas</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- BARRA LATERAL -->
+        <aside class="sidebar">
+
+            <h2>Mi Dashboard</h2>
+
+            <nav aria-label="Navegación principal">
+
+                <a href="#">🏠 Inicio</a>
+                <a href="#">📊 Ventas</a>
+                <a href="#">📦 Productos</a>
+                <a href="#">👥 Clientes</a>
+                <a href="#">⚙️ Configuración</a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- ENCABEZADO -->
+<header class="header">
+
+    <button class="menu-button" aria-label="Abrir menú">
+        ☰
+    </button>
+
+    <h1>Dashboard de Ventas</h1>
+
+    <div class="usuario">
+        👤 Administrador
+    </div>
+
+</header>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="main" role="main">
+
+            <div class="main-header">
+
+                <div>
+                    <h2>Resumen general</h2>
+
+                    <p>
+                        Bienvenido al panel administrativo de ventas.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- TARJETAS DE RESUMEN -->
+
+            <section class="cards" aria-label="Resumen de ventas">
+
+
+                <!-- TARJETA 1 -->
+
+                <article class="card">
+
+                    <div class="card-info">
+
+                        <span class="card-icon">💰</span>
+
+                        <div>
+
+                            <h3>Ventas totales</h3>
+
+                            <p class="card-value">
+                                $12.500.000
+                            </p>
+
+                            <p class="card-change">
+                                +18.5% este mes
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TARJETA 2 -->
+
+                <article class="card">
+
+                    <div class="card-info">
+
+                        <span class="card-icon">📦</span>
+
+                        <div>
+
+                            <h3>Productos vendidos</h3>
+
+                            <p class="card-value">
+                                1.245
+                            </p>
+
+                            <p class="card-change">
+                                +12% este mes
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TARJETA 3 -->
+
+                <article class="card">
+
+                    <div class="card-info">
+
+                        <span class="card-icon">👥</span>
+
+                        <div>
+
+                            <h3>Clientes</h3>
+
+                            <p class="card-value">
+                                856
+                            </p>
+
+                            <p class="card-change">
+                                +8% este mes
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TARJETA 4 -->
+
+                <article class="card">
+
+                    <div class="card-info">
+
+                        <span class="card-icon">📈</span>
+
+                        <div>
+
+                            <h3>Crecimiento</h3>
+
+                            <p class="card-value">
+                                +18.5%
+                            </p>
+
+                            <p class="card-change">
+                                Excelente
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>    <!-- GRÁFICO Y TABLA -->
+
+    <section class="dashboard-content">
+
+        <!-- GRÁFICO -->
+
+        <article class="panel">
+
+            <div class="panel-header">
+                <h2>Ventas mensuales</h2>
+                <span>2026</span>
+            </div>
+
+            <div class="chart">
+
+                <div class="bar-container">
+                    <div class="bar" style="height: 40%;"></div>
+                    <span>Ene</span>
+                </div>
+
+                <div class="bar-container">
+                    <div class="bar" style="height: 55%;"></div>
+                    <span>Feb</span>
+                </div>
+
+                <div class="bar-container">
+                    <div class="bar" style="height: 65%;"></div>
+                    <span>Mar</span>
+                </div>
+
+                <div class="bar-container">
+                    <div class="bar" style="height: 50%;"></div>
+                    <span>Abr</span>
+                </div>
+
+                <div class="bar-container">
+                    <div class="bar" style="height: 75%;"></div>
+                    <span>May</span>
+                </div>
+
+                <div class="bar-container">
+                    <div class="bar" style="height: 85%;"></div>
+                    <span>Jun</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- TABLA -->
+
+        <article class="panel">
+
+            <div class="panel-header">
+                <h2>Ventas recientes</h2>
+                <span>Últimas</span>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Producto</th>
+                            <th>Valor</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>María López</td>
+                            <td>Laptop</td>
+                            <td>$2.500.000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Carlos Pérez</td>
+                            <td>Monitor</td>
+                            <td>$850.000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Ana Gómez</td>
+                            <td>Teclado</td>
+                            <td>$250.000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Juan Rodríguez</td>
+                            <td>Mouse</td>
+                            <td>$120.000</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </article>
+
+    </section>
+            
+        </main>
+
+
+        <!-- PIE DE PÁGINA -->
+
+        <footer class="footer">
+
+            <p>
+                © 2026 Dashboard de Ventas
+            </p>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>/* ==============================
+   BOTÓN DE MENÚ
+   ============================== */
+
+.menu-button {
+    display: none;
+
+    border: none;
+
+    background-color: transparent;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+
+/* ACCESIBILIDAD DEL BOTÓN */
+
+.menu-button:focus {
+    outline: 3px solid var(--color-principal);
+
+    outline-offset: 3px;
+}
+
+
+/* MOSTRAR BOTÓN EN CELULAR */
+
+@media (max-width: 480px) {
+
+    .menu-button {
+        display: block;
+    }
+
+}
